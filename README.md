@@ -58,17 +58,7 @@ For getting instructions of using Laravel Sail, visit [appropriate documentation
    $ sail artisan migrate:fresh
    ```
 
-7. **Create symbolic link to storage folder**
-   ```sh
-   $ sail artisan storage:link
-   ```
-
-8. **Generate JWT secret**
-   ```sh
-   $ sail artisan jwt:secret
-   ```
-
-9. **Run tests!**
+7. **Run tests!**
 ```sh
    $ sail artisan test
    ```
