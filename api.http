@@ -1,0 +1,8 @@
+POST http://localhost/api/submit
+Content-Type: application/json
+
+{
+    "name": "John Doe",
+    "email": "john.doe@example.com",
+    "message": "This is a test message."
+}

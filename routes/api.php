@@ -1,5 +1,6 @@
 <?php
 
+use App\Jobs\SaveSubmission;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -14,6 +15,16 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
-    return $request->user();
+Route::post('/submit', function (Request $request) {
+    try {
+        SaveSubmission::dispatch($request->validate([
+            'name' => 'required|string|max:255',
+            'email' => 'required|email',
+            'message' => 'required|string|max:10000',
+        ]));
+
+        return response()->json(['message' => 'OK']);
+    } catch (Throwable $exception) {
+        return response()->json(['message' => $exception->getMessage()], 400);
+    }
 });
