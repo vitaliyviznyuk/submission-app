@@ -9,8 +9,8 @@ Submission App
 
 ## Installation
 
-For detailed Laravel setup instructions, visit [their documentation](https://laravel.com/docs/9.x/installation).
-For getting instructions of using Laravel Sail, visit [appropriate documentation](https://laravel.com/docs/9.x/sail).
+For detailed Laravel setup instructions, visit [their documentation](https://laravel.com/docs/10.x/installation).
+For getting instructions of using Laravel Sail, visit [appropriate documentation](https://laravel.com/docs/10.x/sail).
 
 1. **Clone the repo**
 
